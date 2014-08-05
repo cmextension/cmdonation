@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_CMDONATION_THANKYOU_VIEW_DEFAULT_TITLE" option="COM_CMDONATION_THANKYOU_VIEW_DEFAULT_OPTION">
+		<message>
+			<![CDATA[COM_CMDONATION_THANKYOU_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+	<fields name="params">
+		<fieldset name="request">
+			<field name="layout" type="list" required="true"
+				label="COM_CMDONATION_FIELD_LAYOUT_LABEL"
+				description="COM_CMDONATION_FIELD_LAYOUT_DESC">
+				<option value="complete">COM_CMDONATION_FIELD_LAYOUT_COMPLETE</option>
+				<option value="cancel">COM_CMDONATION_FIELD_LAYOUT_CANCEL</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

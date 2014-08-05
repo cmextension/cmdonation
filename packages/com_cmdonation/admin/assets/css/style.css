@@ -1,0 +1,96 @@
+.icon-48-dashboard {
+	background-image: url('../images/icons/icon-48-dashboard.png');
+}
+
+.icon-48-campaign {
+	background-image: url('../images/icons/icon-48-campaign.png');
+}
+
+.icon-48-donation {
+	background-image: url('../images/icons/icon-48-donation.png');
+}
+
+.icon-48-statistics {
+	background-image: url('../images/icons/icon-48-statistics.png');
+}
+
+.cmdonation {
+	margin-top: 5px;
+}
+
+.cmdonation .dashboard-info {
+	padding: 0 1em;
+}
+
+.cmdonation .statistics-placeholder {
+	width: 100%;
+	height: 400px;
+}
+
+.cmdonation .sub-menu {
+	background-color: #FFFFFF;
+	border: 1px solid #D4D4D4;
+	border-radius: 4px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-bottom: 1em;
+}
+
+/* Fix conflict with Bootstrap and BlueStork template */
+.cmdonation textarea,
+.cmdonation input,
+.cmdonation select {
+	float: none !important;
+	width: auto;
+}
+
+.cmdonation .fltlft {
+	display: inline;
+	float: none;
+}
+
+.cmdonation fieldset label {
+	float: none;
+}
+
+.cmdonation #jform_id {
+	display: inline;
+}
+
+.cmdonation img.calendar {
+	float: none;
+	margin: auto;
+}
+
+.cmdonation .radio,
+.cmdonation .checkbox {
+	padding-left: 0px;
+}
+
+.cmdonation .btn {
+	padding: 6px 12px;
+}
+
+.cmdonation fieldset li {
+	list-style: disc outside none;
+}
+/* ---------------------------------------------------- */
+.cmdonation .cm-toolbar {
+	margin-bottom: 1em;
+}
+
+.cmdonation .grid-inner {
+	margin: 0 1em;
+}
+
+.cmdonation label.pure-radio {
+	width: auto !important;
+}
+.cmdonation .pure-menu .pure-menu-selected a {
+	background: none repeat scroll 0 0 #eee;
+}
+
+.cmdonation .pagination-counter {
+	padding: 1em 0;
+}

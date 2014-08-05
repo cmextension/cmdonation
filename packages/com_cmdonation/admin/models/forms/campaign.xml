@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" readonly="true" class="readonly"
+			label="JGLOBAL_FIELD_ID_LABEL" description="JGLOBAL_FIELD_ID_DESC" />
+
+		<field name="name" type="text" class="pure-input-1-2" required="true"
+			label="COM_CMDONATION_NAME" description="COM_CMDONATION_CAMPAIGN_FIELD_NAME_DESC" />
+
+		<field name="complete_message" type="editor" hide="pagebreak,readmore,article"
+			filter="JComponentHelper::filterText"
+			label="COM_CMDONATION_CAMPAIGN_FIELD_COMPLETE_MESSAGE_LABEL"
+			description="COM_CMDONATION_CAMPAIGN_FIELD_COMPLETE_MESSAGE_DESC" />
+
+		<field name="cancel_message" type="editor" hide="pagebreak,readmore,article"
+			filter="JComponentHelper::filterText"
+			label="COM_CMDONATION_CAMPAIGN_FIELD_CANCEL_MESSAGE_LABEL"
+			description="COM_CMDONATION_CAMPAIGN_FIELD_CANCEL_MESSAGE_DESC" />
+
+		<field name="created" type="text" readonly="true" class="readonly"
+			label="JGLOBAL_FIELD_CREATED_LABEL" description="JGLOBAL_FIELD_CREATED_DESC" />
+
+		<field name="created_by" type="user" class="readonly" readonly="true" filter="unset"
+			label="JGLOBAL_FIELD_CREATED_BY_LABEL" description="JGLOBAL_FIELD_CREATED_BY_LABEL" />
+
+		<field name="modified" type="text" readonly="true" class="readonly"
+			label="JGLOBAL_FIELD_MODIFIED_LABEL" description="JGLOBAL_FIELD_MODIFIED_LABEL" />
+
+		<field name="modified_by" type="user" class="readonly" readonly="true" filter="unset"
+			label="JGLOBAL_FIELD_MODIFIED_BY_LABEL" description="JGLOBAL_FIELD_MODIFIED_BY_LABEL" />
+
+		<field name="checked_out" type="hidden" filter="unset" />
+
+		<field name="checked_out_time" type="hidden" filter="unset" />
+	</fieldset>
+</form>

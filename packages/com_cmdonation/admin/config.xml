@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+
+	<fieldset name="general"
+		label="COM_CMDONATION_OPTIONS_GENERAL_LABEL"
+		description="COM_CMDONATION_OPTIONS_GENERAL_DESC">
+
+		<field name="row_number_column" type="radio" default="show"
+			label="COM_CMDONATION_FIELD_ROW_NUMBER_COLUMN_LABEL"
+			description="COM_CMDONATION_FIELD_ROW_NUMBER_COLUMN_DESC">
+			<option value="show">JSHOW</option>
+			<option value="hide">JHIDE</option>
+		</field>
+
+		<field name="date_format" type="radio" default="COM_CMDONATION_DATE_FORMAT_1"
+			label="COM_CMDONATION_FIELD_DATE_FORMAT_LABEL"
+			description="COM_CMDONATION_FIELD_DATE_FORMAT_DESC">
+			<option value="COM_CMDONATION_DATE_FORMAT_1">2014/09/21</option>
+			<option value="COM_CMDONATION_DATE_FORMAT_2">2014-09-21</option>
+			<option value="COM_CMDONATION_DATE_FORMAT_3">21/09/2014</option>
+			<option value="COM_CMDONATION_DATE_FORMAT_4">21-09-2014</option>
+			<option value="COM_CMDONATION_DATE_FORMAT_5">09/21/2014</option>
+			<option value="COM_CMDONATION_DATE_FORMAT_6">09-21-2014</option>
+			<option value="COM_CMDONATION_DATE_FORMAT_7">21.09.2014</option>
+			<option value="COM_CMDONATION_DATE_FORMAT_8">2014.09.21</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset name="currency"
+		label="COM_CMDONATION_OPTIONS_CURRENCY_LABEL"
+		description="COM_CMDONATION_OPTIONS_CURRENCY_DESC">
+
+		<field name="currency_sign" type="text"
+			label="COM_CMDONATION_FIELD_CURRENCY_SIGN_LABEL"
+			description="COM_CMDONATION_FIELD_CURRENCY_SIGN_DESC" />
+
+		<field name="currency_sign_position" type="radio" default="before"
+			label="COM_CMDONATION_FIELD_CURRENCY_SIGN_POSITION_LABEL"
+			description="COM_CMDONATION_FIELD_CURRENCY_SIGN_POSITION_DESC">
+			<option value="before">COM_CMDONATION_FIELD_CURRENCY_SIGN_POSITION_BEFORE</option>
+			<option value="after">COM_CMDONATION_FIELD_CURRENCY_SIGN_POSITION_AFTER</option>
+		</field>
+
+		<field name="decimals" type="radio" class="inputbox" default="0" filter="uint"
+			label="COM_CMDONATION_FIELD_DECIMALS_LABEL"
+			description="COM_CMDONATION_FIELD_DECIMALS_DESC">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+		</field>
+
+		<field name="decimal_point" type="radio" class="inputbox" default="."
+			label="COM_CMDONATION_FIELD_DECIMAL_POINT_LABEL"
+			description="COM_CMDONATION_FIELD_DECIMAL_POINT_DESC">
+				<option value=".">COM_CMDONATION_DOT</option>
+				<option value=",">COM_CMDONATION_COMMA</option>
+		</field>
+
+		<field name="thousand_separator" type="radio" class="inputbox" default=","
+			label="COM_CMDONATION_FIELD_THOUSAND_SEPARATOR_LABEL"
+			description="COM_CMDONATION_FIELD_THOUSAND_SEPARATOR_DESC">
+				<option value="">COM_CMDONATION_NONE</option>
+				<option value=".">COM_CMDONATION_DOT</option>
+				<option value=",">COM_CMDONATION_COMMA</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset name="donation"
+		label="COM_CMDONATION_OPTIONS_DONATION_LABEL"
+		description="COM_CMDONATION_OPTIONS_DONATION_DESC">
+
+		<field name="anonymous_donation" type="radio" default="0" filter="uint"
+			label="COM_CMDONATION_FIELD_ANONYMOUS_DONATION_LABEL"
+			description="COM_CMDONATION_FIELD_ANONYMOUS_DONATION_DESC">
+			<option value="1">JENABLED</option>
+			<option value="0">JDISABLED</option>
+		</field>
+
+		<field name="recurring_donation" type="radio" default="0" filter="uint"
+			label="COM_CMDONATION_FIELD_RECURRING_DONATION_LABEL"
+			description="COM_CMDONATION_FIELD_RECURRING_DONATION_DESC">
+			<option value="1">JENABLED</option>
+			<option value="0">JDISABLED</option>
+		</field>
+
+		<field name="recurring_cycles" type="checkboxes" class="checkbox"
+			label="COM_CMDONATION_FIELD_RECURRING_CYCLES_LABEL"
+			description="COM_CMDONATION_FIELD_RECURRING_CYCLES_DESC">
+			<option value="D">COM_CMDONATION_FIELD_RECURRING_CYCLE_DAILY</option>
+			<option value="W">COM_CMDONATION_FIELD_RECURRING_CYCLE_WEEKLY</option>
+			<option value="S">COM_CMDONATION_FIELD_RECURRING_CYCLE_SEMIMONTHLY</option>
+			<option value="M">COM_CMDONATION_FIELD_RECURRING_CYCLE_MONTHLY</option>
+			<option value="Y">COM_CMDONATION_FIELD_RECURRING_CYCLE_ANNUALLY</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset name="donation_form"
+		label="COM_CMDONATION_OPTIONS_DONATION_FORM_LABEL"
+		description="COM_CMDONATION_OPTIONS_DONATION_FORM_DESC">
+
+		<field name="hide_lone_payment_option" type="radio" default="0" filter="uint"
+			label="COM_CMDONATION_FIELD_HIDE_LONE_PAYMENT_OPTION_LABEL"
+			description="COM_CMDONATION_FIELD_HIDE_LONE_PAYMENT_OPTION_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset name="donor_list"
+		label="COM_CMDONATION_OPTIONS_DONOR_LIST_LABEL"
+		description="COM_CMDONATION_OPTIONS_DONOR_LIST_DESC">
+
+		<field name="donor_name" type="radio" default="both"
+			label="COM_CMDONATION_FIELD_DONOR_NAME_LABEL"
+			description="COM_CMDONATION_FIELD_DONOR_NAME_DESC">
+			<option value="first">COM_CMDONATION_FIELD_FIRST_NAME_ONLY</option>
+			<option value="last">COM_CMDONATION_FIELD_LAST_NAME_ONLY</option>
+			<option value="both">COM_CMDONATION_FIELD_BOTH_FIRST_LAST_NAME</option>
+
+		</field>
+
+		<field name="donor_list_country" type="radio" default="both"
+			label="COM_CMDONATION_FIELD_DONOR_LIST_COUNTRY_LABEL"
+			description="COM_CMDONATION_FIELD_DONOR_LIST_COUNTRY_DESC">
+			<option value="hide">COM_CMDONATION_FIELD_COUNTRY_HIDE</option>
+			<option value="flag">COM_CMDONATION_FIELD_COUNTRY_FLAG</option>
+			<option value="name">COM_CMDONATION_FIELD_COUNTRY_NAME</option>
+			<option value="both">COM_CMDONATION_FIELD_COUNTRY_NAME_FLAG</option>
+		</field>
+
+		<field name="date_column" type="radio" default="show"
+			label="COM_CMDONATION_FIELD_DATE_COLUMN_LABEL"
+			description="COM_CMDONATION_FIELD_DATE_COLUMN_DESC">
+			<option value="show">JSHOW</option>
+			<option value="hide">JHIDE</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset name="country_list"
+		label="COM_CMDONATION_OPTIONS_COUNTRY_LIST_LABEL"
+		description="COM_CMDONATION_OPTIONS_COUNTRY_LIST_DESC">
+
+		<field name="country_list_country" type="radio" default="both"
+			label="COM_CMDONATION_FIELD_COUNTRY_LIST_COUNTRY_LABEL"
+			description="COM_CMDONATION_FIELD_COUNTRY_LIST_COUNTRY_DESC">
+			<option value="flag">COM_CMDONATION_FIELD_COUNTRY_FLAG</option>
+			<option value="name">COM_CMDONATION_FIELD_COUNTRY_NAME</option>
+			<option value="both">COM_CMDONATION_FIELD_COUNTRY_NAME_FLAG</option>
+		</field>
+
+		<field name="contribution_column" type="radio" default="show"
+			label="COM_CMDONATION_FIELD_CONTRIBUTION_COLUMN_LABEL"
+			description="COM_CMDONATION_FIELD_CONTRIBUTION_COLUMN_DESC">
+			<option value="show">JSHOW</option>
+			<option value="hide">JHIDE</option>
+		</field>
+
+		<field name="contribution_decimals" type="radio" class="inputbox" default="0" filter="uint"
+			label="COM_CMDONATION_FIELD_CONTRIBUTION_DECIMALS_LABEL"
+			description="COM_CMDONATION_FIELD_CONTRIBUTION_DECIMALS_DESC">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+		</field>
+
+		<field name="lowest_column" type="radio" default="show"
+			label="COM_CMDONATION_FIELD_LOWEST_COLUMN_LABEL"
+			description="COM_CMDONATION_FIELD_LOWEST_COLUMN_DESC">
+			<option value="show">JSHOW</option>
+			<option value="hide">JHIDE</option>
+		</field>
+
+		<field name="average_column" type="radio" default="show"
+			label="COM_CMDONATION_FIELD_AVERAGE_COLUMN_LABEL"
+			description="COM_CMDONATION_FIELD_AVERAGE_COLUMN_DESC">
+			<option value="show">JSHOW</option>
+			<option value="hide">JHIDE</option>
+		</field>
+
+		<field name="highest_column" type="radio" default="show"
+			label="COM_CMDONATION_FIELD_HIGHEST_COLUMN_LABEL"
+			description="COM_CMDONATION_FIELD_HIGHEST_COLUMN_DESC">
+			<option value="show">JSHOW</option>
+			<option value="hide">JHIDE</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset name="statistics"
+		label="COM_CMDONATION_OPTIONS_STATISTICS_LABEL"
+		description="COM_CMDONATION_OPTIONS_STATISTICS_DESC">
+
+		<field name="statistics_country" type="radio" default="both"
+			label="COM_CMDONATION_FIELD_STATISTICS_COUNTRY_LABEL"
+			description="COM_CMDONATION_FIELD_STATISTICS_COUNTRY_DESC">
+			<option value="hide">COM_CMDONATION_FIELD_COUNTRY_HIDE</option>
+			<option value="flag">COM_CMDONATION_FIELD_COUNTRY_FLAG</option>
+			<option value="name">COM_CMDONATION_FIELD_COUNTRY_NAME</option>
+			<option value="both">COM_CMDONATION_FIELD_COUNTRY_NAME_FLAG</option>
+		</field>
+
+		<field name="csv_delimiter_character" type="radio" class="inputbox" default=","
+			label="COM_CMDONATION_FIELD_CSV_DELIMITER_CHARACTER_LABEL"
+			description="COM_CMDONATION_FIELD_CSV_DELIMITER_CHARACTER_DESC">
+				<option value=",">COM_CMDONATION_COMMA</option>
+				<option value=";">COM_CMDONATION_SEMICOLON</option>
+		</field>
+
+		<field name="csv_enclosure_character" type="radio" class="inputbox" default="double"
+			label="COM_CMDONATION_FIELD_CSV_ENCLOSURE_CHARACTER_LABEL"
+			description="COM_CMDONATION_FIELD_CSV_ENCLOSURE_CHARACTER_DESC">
+				<option value="double">COM_CMDONATION_CSV_DOUBLE_QUOTE</option>
+				<option value="single">COM_CMDONATION_CSV_SINGLE_QUOTE</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC">
+
+		<field name="rules" type="rules" component="com_cmdonation"
+			filter="rules" validate="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			section="component" />
+
+	</fieldset>
+
+</config>

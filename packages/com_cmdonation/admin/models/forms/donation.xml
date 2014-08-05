@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" readonly="true" class="readonly"
+			label="JGLOBAL_FIELD_ID_LABEL" description="JGLOBAL_FIELD_ID_DESC" />
+
+		<field name="campaign_id" type="cmcampaign" required="true"
+			label="COM_CMDONATION_DONATION_CAMPAIGN_LABEL" description="COM_CMDONATION_DONATION_CAMPAIGN_DESC" />
+
+		<field name="first_name" type="text" required="true"
+			label="COM_CMDONATION_DONATION_FIRST_NAME_LABEL" description="COM_CMDONATION_DONATION_FIRST_NAME_DESC" />
+
+		<field name="last_name" type="text" required="true"
+			label="COM_CMDONATION_DONATION_LAST_NAME_LABEL" description="COM_CMDONATION_DONATION_LAST_NAME_DESC" />
+
+		<field name="email" type="text"
+			label="COM_CMDONATION_DONATION_EMAIL_LABEL" description="COM_CMDONATION_DONATION_EMAIL_DESC" />
+
+		<field name="country_code" type="cmcountry"
+			label="COM_CMDONATION_DONATION_COUNTRY_LABEL" description="COM_CMDONATION_DONATION_COUNTRY_DESC" />
+
+		<field name="anonymous" type="cmradio" required="true"
+			label="COM_CMDONATION_DONATION_ANONYMOUS_LABEL" description="COM_CMDONATION_DONATION_ANONYMOUS_DESC">
+				<option value="1" class="pure-radio">JYES</option>
+				<option value="0" class="pure-radio">JNO</option>
+		</field>
+
+		<field name="amount" type="text" required="true"
+			label="COM_CMDONATION_DONATION_AMOUNT_LABEL" description="COM_CMDONATION_DONATION_AMOUNT_DESC" />
+
+		<field name="payment_method_id" type="cmpaymentmethod" required="true"
+			label="COM_CMDONATION_DONATION_PAYMENT_METHOD_LABEL" description="COM_CMDONATION_DONATION_PAYMENT_METHOD_DESC" />
+
+		<field name="status" type="list" required="true"
+			label="COM_CMDONATION_DONATION_STATUS_LABEL" description="COM_CMDONATION_DONATION_STATUS_DESC">
+				<option value="">COM_CMDONATION_SELECT_STATUS_OPTION</option>
+				<option value="INCOMPLETE">COM_CMDONATION_DONATION_STATUS_INCOMPLETE</option>
+				<option value="COMPLETED">COM_CMDONATION_DONATION_STATUS_COMPLETED</option>
+				<option value="REFUNDED">COM_CMDONATION_DONATION_STATUS_REFUNDED</option>
+		</field>
+
+		<field name="transaction_params" type="cmtransaction"
+			label="COM_CMDONATION_DONATION_TRANSACTION_PARAMS_LABEL" description="COM_CMDONATION_DONATION_TRANSACTION_PARAMS_DESC" />
+
+		<field name="completed" type="calendar" size="22" format="%Y-%m-%d %H:%M:%S" filter="user_utc"
+			label="COM_CMDONATION_DONATION_COMPLETED_LABEL" description="COM_CMDONATION_DONATION_COMPLETED_DESC" />
+
+		<field name="created" type="text" readonly="true" class="readonly"
+			label="JGLOBAL_FIELD_CREATED_LABEL" description="JGLOBAL_FIELD_CREATED_DESC" />
+
+		<field name="created_by" type="user" class="readonly" readonly="true" filter="unset"
+			label="JGLOBAL_FIELD_CREATED_BY_LABEL" description="JGLOBAL_FIELD_CREATED_BY_LABEL" />
+
+		<field name="modified" type="text" readonly="true" class="readonly"
+			label="JGLOBAL_FIELD_MODIFIED_LABEL" description="JGLOBAL_FIELD_MODIFIED_LABEL" />
+
+		<field name="modified_by" type="user" class="readonly" readonly="true" filter="unset"
+			label="JGLOBAL_FIELD_MODIFIED_BY_LABEL" description="JGLOBAL_FIELD_MODIFIED_BY_LABEL" />
+
+		<field name="checked_out" type="hidden" filter="unset" />
+
+		<field name="checked_out_time" type="hidden" filter="unset" />
+	</fieldset>
+</form>
