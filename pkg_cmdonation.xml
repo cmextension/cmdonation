@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension type="package" version="2.5">
 	<name>CM Donation package</name>
-	<description>Package for CM Donation component. Including the component and required plug-ins.</description>
-	<version>1.0.0</version>
+	<description>The package for CM Donation component. Including the component and the required plug-ins.</description>
+	<version>1.0.1</version>
 	<author>CMExtension team</author>
 	<authorEmail>cmext.vn@gmail.com</authorEmail>
 	<authorUrl>www.cmext.vn</authorUrl>
-	<creationDate>August 2014</creationDate>
-	<copyright>(C) 2012-2014 CMExtension team</copyright>
+	<creationDate>August 6, 2014</creationDate>
+	<copyright>(C) 2014 CMExtension team</copyright>
 	<license>GNU General Public License version 2 or later</license>
 	<packagename>cmdonation</packagename>
 	<url>http://www.cmext.vn/</url>
 	<packager>CMExtension team</packager>
 	<packagerurl>http://www.cmext.vn/</packagerurl>
 	<updateservers>
+<<<<<<< HEAD
 		<server type="collection" priority="1" name="CM Donation package">http://www.cmext.vn/joomla/extensions/update/pkg_cmdonation_update.xml</server>
+=======
+		<server type="extension" priority="1" name="CM Donation package">http://www.cmext.vn/joomla/extensions/update/pkg_cmdonation_update.xml</server>
+>>>>>>> 1.0.1
 	</updateservers>
 	<files folder="packages">
 		<folder type="component" id="com_cmdonation" >com_cmdonation</folder>
