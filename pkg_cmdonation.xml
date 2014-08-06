@@ -14,7 +14,7 @@
 	<packager>CMExtension team</packager>
 	<packagerurl>http://www.cmext.vn/</packagerurl>
 	<updateservers>
-		<server type="collection" priority="1" name="CM Donation package">http://www.cmext.vn/joomla/extensions/update/pkg_cmdonation_update.xml</server>
+		<server type="extension" priority="1" name="CM Donation package">http://www.cmext.vn/joomla/extensions/update/pkg_cmdonation_update.xml</server>
 	</updateservers>
 	<files folder="packages">
 		<folder type="component" id="com_cmdonation" >com_cmdonation</folder>
