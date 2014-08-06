@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="2.5" type="plugin" group="cmdonation" method="upgrade">
 	<name>CM Donation - PayPal Payments Pro (Express Checkout) payment plugin</name>
-	<version>1.0.0</version>
-	<copyright>(C) 2012-2014 CMExtension team</copyright>
+	<version>1.0.1</version>
+	<copyright>(C) 2014 CMExtension team</copyright>
 	<author>CMExtension team</author>
 	<authorEmail>cmext.vn@gmail.com</authorEmail>
 	<authorUrl>www.cmext.vn</authorUrl>
 	<license>GNU General Public License version 2 or later</license>
-	<creationDate>August 4, 2014</creationDate>
+	<creationDate>August 6, 2014</creationDate>
 	<description>PayPal Payments Pro (Express Checkout) payment plugin for CM Donation component</description>
 
 	<files>
