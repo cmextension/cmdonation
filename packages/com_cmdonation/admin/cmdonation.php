@@ -12,7 +12,7 @@ if (!JFactory::getUser()->authorise('core.manage', 'com_cmdonation'))
 	return JError::raiseWarning(404, JText::_('JERROR_ALERTNOAUTHOR'));
 }
 
-require JPATH_COMPONENT_ADMINISTRATOR . '/helpers/cmdonation.php';
+require_once JPATH_COMPONENT_ADMINISTRATOR . '/helpers/cmdonation.php';
 
 // Load CM Donation component's front-end language files.
 $lang = JFactory::getLanguage();

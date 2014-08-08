@@ -19,7 +19,7 @@ class CMDonationHelper
 	 *
 	 * @param   string  $active  Active view's name.
 	 *
-	 * @return  void
+	 * @return  string
 	 *
 	 * @since   1.0.0
 	 */

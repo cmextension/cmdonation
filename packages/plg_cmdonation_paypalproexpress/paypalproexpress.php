@@ -101,6 +101,7 @@ class PlgCMDonationPaypalProExpress extends PlgCMPaymentAbstract
 			'ALLOWNOTE'							=> 0,
 			// Allow paying with credit cards without signing up for a PayPal account.
 			'SOLUTIONTYPE'						=> 'Sole',
+			'LOCALECODE'						=> $this->getLocale(),
 		);
 
 		if ($data->recurring)
@@ -920,6 +921,62 @@ class PlgCMDonationPaypalProExpress extends PlgCMPaymentAbstract
 	private function getCurrency()
 	{
 		return trim($this->params->get('currency', 'USD'));
+	}
+
+	/**
+	 * Get locale from plugin's settings.
+	 *
+	 * @return  string
+	 *
+	 * @since   1.0.2
+	 */
+	private function getLocale()
+	{
+		$locale = trim($this->params->get('locale', 'GB'));
+
+		if ($locale == 'JOOMLA')
+		{
+			$lang = JFactory::getLanguage();
+			$langTag = $lang->getTag();
+
+			/*
+			 * Array(Joomla! language tag => PayPal local code)
+			 * https://developer.paypal.com/docs/classic/api/merchant/SetExpressCheckout_API_Operation_NVP/
+			 */
+			$langMaps = array(
+				'en-AU'	=> 'AU',
+				'nl-BE'	=> 'BE',
+				'pt-PT'	=> 'BR', // Or pt_BR?
+				'en-CA'	=> 'CA',
+				'de-DE'	=> 'DE',
+				'de-CH'	=> 'DE',
+				'de-AT'	=> 'DE',
+				'es-ES'	=> 'ES',
+				'en-GB'	=> 'GB',
+				'fr-CA'	=> 'FR',
+				'it-IT'	=> 'IT',
+				'nl-NL'	=> 'NL',
+				'pl-PL'	=> 'PL',
+				'pt-PT'	=> 'PT',
+				'ru-RU'	=> 'RU', // Or ru_RU?
+				'en-US'	=> 'US',
+				'zh-CN'	=> 'zh_CN',
+				'zh-TW'	=> 'zh_TW',
+				'da-DK'	=> 'da_DK',
+				'he-IL'	=> 'he_IL',
+				'id-ID'	=> 'id_ID',
+				'ja-JP'	=> 'ja_JP',
+				'nb-NO'	=> 'no_NO',
+				'nn-NO'	=> 'no_NO',
+				'sv-SE'	=> 'sv_SE',
+				'th-TH'	=> 'th_TH',
+				'tr-TR'	=> 'tr_TR'
+			);
+
+			return isset($langMaps[$langTag]) ? $langMaps[$langTag] : 'GB';
+		}
+
+		return $locale;
 	}
 
 	/**
