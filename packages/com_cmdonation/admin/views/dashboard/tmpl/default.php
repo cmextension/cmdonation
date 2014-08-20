@@ -96,8 +96,8 @@ $dateFormat				= $params->get('date_format');
 					<h4>Extension information</h4>
 					<ul>
 						<li>Extension: CM Donation</li>
-						<li>Version: 1.0.1</li>
-						<li>Released date: August 6, 2014</li>
+						<li>Version: 1.0.3</li>
+						<li>Released date: August 20, 2014</li>
 						<li>License: <a href="http://www.gnu.org/licenses/gpl-2.0.html" target="_blank">GNU General Public License version 2 or later</a></li>
 						<li>Author: <a href="http://www.cmext.vn/" target="_blank">CMExtension team</a></li>
 					</ul>

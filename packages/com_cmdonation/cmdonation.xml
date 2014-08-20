@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="2.5" method="upgrade">
 	<name>com_cmdonation</name>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<copyright>(C) 2014 CMExtension team</copyright>
 	<author>CMExtension team</author>
 	<authorEmail>cmext.vn@gmail.com</authorEmail>
 	<authorUrl>www.cmext.vn</authorUrl>
 	<license>GNU General Public License version 2 or later</license>
-	<creationDate>August 8, 2014</creationDate>
+	<creationDate>August 20, 2014</creationDate>
 	<description>COM_CMDONATION_XML_DESCRIPTION</description>
 
 	<install>
