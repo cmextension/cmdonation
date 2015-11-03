@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<extension type="package" version="2.5">
+<extension type="package" version="2.5" method="upgrade">
 	<name>CM Donation package</name>
 	<description>The package for CM Donation component. Including the component and the required plug-ins.</description>
-	<version>1.0.3</version>
+	<version>1.1.0</version>
 	<author>CMExtension team</author>
 	<authorEmail>cmext.vn@gmail.com</authorEmail>
 	<authorUrl>www.cmext.vn</authorUrl>
-	<creationDate>August 20, 2014</creationDate>
-	<copyright>(C) 2014 CMExtension team</copyright>
+	<creationDate>November 3, 2015</creationDate>
+	<copyright>(C) 2014-2015 CMExtension team</copyright>
 	<license>GNU General Public License version 2 or later</license>
 	<packagename>cmdonation</packagename>
 	<url>http://www.cmext.vn/</url>
@@ -20,5 +20,6 @@
 		<folder type="component" id="com_cmdonation" >com_cmdonation</folder>
 		<folder type="plugin" id="cmdonationcontent" group="content">plg_content_cmdonationcontent</folder>
 		<folder type="plugin" id="paypalproexpress" group="cmdonation">plg_cmdonation_paypalproexpress</folder>
+		<folder type="plugin" id="paypal" group="cmdonation">plg_cmdonation_paypal</folder>
 	</files>
 </extension>

@@ -1,7 +1,7 @@
 <?php
 /**
- * @package    CMDonationContent
- * @copyright  Copyright (C) 2012-2014 CMExtension Team http://www.cmext.vn/
+ * @package    PlgContentCMDonationContent
+ * @copyright  Copyright (C) 2014-2015 CMExtension Team http://www.cmext.vn/
  * @license    GNU General Public License version 2 or later
  */
 
@@ -78,9 +78,7 @@ class PlgContentCMDonationContent extends JPlugin
 		else
 		{
 			// Load CSS.
-			$doc = JFactory::getDocument();
-			$doc->addStyleSheet('components/com_cmdonation/assets/css/pure-min.css');
-			$doc->addStyleSheet('components/com_cmdonation/assets/css/pure-responsive-min.css');
+			JFactory::getDocument()->addStyleSheet('components/com_cmdonation/assets/css/pure-min.css');
 		}
 
 		// Number of donations.

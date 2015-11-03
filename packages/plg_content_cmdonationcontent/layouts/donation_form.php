@@ -1,7 +1,7 @@
 <?php
 /**
- * @package    CMDonationContent
- * @copyright  Copyright (C) 2012-2014 CMExtension Team http://www.cmext.vn/
+ * @package    PlgContentCMDonationContent
+ * @copyright  Copyright (C) 2014-2015 CMExtension Team http://www.cmext.vn/
  * @license    GNU General Public License version 2 or later
  */
 
@@ -55,8 +55,12 @@ JS;
 			<?php if ($anonymous): ?>
 			<div class="pure-control-group">
 				<label></label>
-				<input type="checkbox" value="1" class="inputbox" name="anonymous" id="anonymous">
-				<?php echo $langAnonymous; ?>
+				<div class="pure-controls">
+					<label for="anonymous" class="pure-checkbox">
+						<input type="checkbox" value="1" class="inputbox" name="anonymous" id="anonymous">
+						<?php echo $langAnonymous; ?>
+					</label>
+				</div>
 			</div>
 			<?php endif; ?>
 
@@ -65,11 +69,15 @@ JS;
 			if (!$loneOption || ($loneOption && !$hideLoneOption)):
 			?>
 			<div class="pure-control-group">
-				<label for="payment_method"><?php echo $langPaymentMethod; ?></label>
-				<?php foreach ($paymentMethods as $method): ?>
-				<input type="radio" name="payment_method" id="payment_method_<?php echo $method->name; ?>" value="<?php echo $method->name; ?>">
-				<?php echo $method->title; ?>
-				<?php endforeach; ?>
+				<label class="item-list-label"><?php echo $langPaymentMethod; ?></label>
+					<div class="pure-controls">
+					<?php foreach ($paymentMethods as $method): ?>
+						<label for="payment_method_<?php echo $method->name; ?>" class="pure-radio">
+							<input type="radio" name="payment_method" id="payment_method_<?php echo $method->name; ?>" value="<?php echo $method->name; ?>">
+							<?php echo $method->title; ?>
+						</label>
+					<?php endforeach; ?>
+				</div>
 			</div>
 			<?php
 			// Hide payment method selection.
@@ -87,8 +95,12 @@ JS;
 			<?php if ($recurring): ?>
 			<div class="pure-control-group">
 				<label></label>
-				<input type="checkbox" value="1" class="inputbox" name="recurring" id="recurring">
-				<?php echo $langRecurringDonation; ?>
+				<div class="pure-controls">
+					<label for="recurring" class="pure-checkbox">
+						<input type="checkbox" value="1" class="inputbox" name="recurring" id="recurring">
+						<?php echo $langRecurringDonation; ?>
+					</label>
+				</div>
 			</div>
 			<?php endif; ?>
 

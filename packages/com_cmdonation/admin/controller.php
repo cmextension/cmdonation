@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    CMDonation
- * @copyright  Copyright (C) 2012-2014 CMExtension Team http://www.cmext.vn/
+ * @copyright  Copyright (C) 2014-2015 CMExtension Team http://www.cmext.vn/
  * @license    GNU General Public License version 2 or later
  */
 
@@ -59,7 +59,6 @@ class CMDonationController extends JControllerLegacy
 		// Load CSS.
 		$doc = JFactory::getDocument();
 		$doc->addStyleSheet('../components/com_cmdonation/assets/css/pure-min.css');
-		$doc->addStyleSheet('../components/com_cmdonation/assets/css/pure-responsive-min.css');
 		$doc->addStyleSheet('../components/com_cmdonation/assets/css/font-awesome.min.css');
 		$doc->addStyleSheet('components/com_cmdonation/assets/css/style.css');
 

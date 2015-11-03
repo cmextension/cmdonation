@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    CMDonation
- * @copyright  Copyright (C) 2012-2014 CMExtension Team http://www.cmext.vn/
+ * @copyright  Copyright (C) 2014-2015 CMExtension Team http://www.cmext.vn/
  * @license    GNU General Public License version 2 or later
  */
 
@@ -45,15 +45,14 @@ class CMDonationHelper
 		);
 
 		$html = '<div class="sub-menu">';
-
-		$html .= '<div class="pure-menu pure-menu-open pure-menu-horizontal">';
-		$html .= '<ul>';
+		$html .= '<div class="pure-menu pure-menu-horizontal">';
+		$html .= '<ul class="pure-menu-list">';
 
 		foreach ($items as $view => $item)
 		{
-			$classes = ($view == $active) ? ' pure-menu-selected' : '';
+			$classes = ($view == $active) ? 'pure-menu-item pure-menu-selected' : 'pure-menu-item';
 
-			$html .= '<li class="' . $classes . '"><a href="' . $item['link'] . '">' . $item['label'] . '</a></li>';
+			$html .= '<li class="' . $classes . '"><a href="' . $item['link'] . '" class="pure-menu-link">' . $item['label'] . '</a></li>';
 		}
 
 		$html .= '</ul>';
@@ -470,6 +469,12 @@ class CMDonationHelper
 							$donations[$key]->country_flag = $countries[$donation->country_code]->country_flag;
 							$donations[$key]->country_name = $countries[$donation->country_code]->country_name;
 						}
+					}
+					else
+					{
+						$donations[$key]->country_code		= $donation->country_code;
+						$donations[$key]->country_name		= '';
+						$donations[$key]->country_flag		= '';
 					}
 				}
 			}

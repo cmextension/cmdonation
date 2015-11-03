@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="2.5" type="plugin" group="content" method="upgrade">
 	<name>PLG_CONTENT_CMDONATIONCONTENT</name>
-	<version>1.0.3</version>
-	<copyright>(C) 2014 CMExtension team</copyright>
+	<version>1.1.0</version>
+	<creationDate>November 3, 2015</creationDate>
+	<copyright>(C) 2014-2015 CMExtension Team</copyright>
 	<author>CMExtension team</author>
 	<authorEmail>cmext.vn@gmail.com</authorEmail>
 	<authorUrl>www.cmext.vn</authorUrl>
 	<license>GNU General Public License version 2 or later</license>
-	<creationDate>August 20, 2014</creationDate>
 	<description>PLG_CONTENT_CMDONATIONCONTENT_XML_DESCRIPTION</description>
 	<files>
 		<folder>language</folder>
 		<folder>layouts</folder>
 		<filename plugin="cmdonationcontent">cmdonationcontent.php</filename>
-		<filename>index.html</filename>
 	</files>
 	<config>
 		<fields name="params">

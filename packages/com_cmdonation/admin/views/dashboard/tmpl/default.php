@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    CMDonation
- * @copyright  Copyright (C) 2012-2014 CMExtension Team http://www.cmext.vn/
+ * @copyright  Copyright (C) 2014-2015 CMExtension Team http://www.cmext.vn/
  * @license    GNU General Public License version 2 or later
  */
 
@@ -96,16 +96,15 @@ $dateFormat				= $params->get('date_format');
 					<h4>Extension information</h4>
 					<ul>
 						<li>Extension: CM Donation</li>
-						<li>Version: 1.0.3</li>
-						<li>Released date: August 20, 2014</li>
+						<li>Version: 1.1.0</li>
+						<li>Released date: November 3, 2015</li>
 						<li>License: <a href="http://www.gnu.org/licenses/gpl-2.0.html" target="_blank">GNU General Public License version 2 or later</a></li>
 						<li>Author: <a href="http://www.cmext.vn/" target="_blank">CMExtension team</a></li>
 					</ul>
 					<h4>Credits</h4>
 					<ul>
-						<li>Back-end icons: <a href="http://tango.freedesktop.org/" target="_blank">Tango Materia Icon Theme (0.0.6) by Tango Desktop Project</a> and <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome by Dave Gandy</a></li>
 						<li>Flag icons: <a href="http://www.famfamfam.com/" target="_blank">Mark James</a></li>
-						<li>CSS framework: <a href="http://wwwpurecss.io/" target="_blank">Pure</a> (customized)</li>
+						<li>CSS framework: <a href="http://www.purecss.io/" target="_blank">Pure</a> (customized)</li>
 					</ul>
 				</div>
 			</div>

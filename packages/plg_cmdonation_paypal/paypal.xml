@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="cmdonation" method="upgrade">
+	<name>PLG_CMDONATION_PAYPAL</name>
+	<version>1.1.0</version>
+	<creationDate>November 3, 2015</creationDate>
+	<copyright>(C) 2014-2015 CMExtension Team</copyright>
+	<author>CMExtension Team</author>
+	<authorEmail>cmext.vn@gmail.com</authorEmail>
+	<authorUrl>www.cmext.vn</authorUrl>
+	<license>GNU General Public License version 2 or later</license>
+	<description>PLG_CMDONATION_PAYPAL_DESCRIPTION</description>
+
+	<files>
+		<folder>language</folder>
+		<filename>form.php</filename>
+		<filename plugin="paypal">paypal.php</filename>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field type="spacer" label="PLG_CMDONATION_PAYPAL_SPACER_GENERAL_LABEL"/>
+
+				<field name="title" type="text" default="PayPal"
+					label="PLG_CMDONATION_PAYPAL_TITLE_LABEL"
+					description="PLG_CMDONATION_PAYPAL_TITLE_DESC" />
+
+				<field name="email" type="text"
+					label="PLG_CMDONATION_PAYPAL_EMAIL_LABEL"
+					description="PLG_CMDONATION_PAYPAL_EMAIL_DESC" />
+
+				<field name="currency"
+					type="list"
+					default="USD"
+					label="PLG_CMDONATION_PAYPAL_CURRENCY_LABEL"
+					description="PLG_CMDONATION_PAYPAL_CURRENCY_DESC">
+						<option value="AUD">PLG_CMDONATION_PAYPAL_CURRENCY_AUD</option>
+						<option value="CAD">PLG_CMDONATION_PAYPAL_CURRENCY_CAD</option>
+						<option value="CZK">PLG_CMDONATION_PAYPAL_CURRENCY_CZK</option>
+						<option value="DKK">PLG_CMDONATION_PAYPAL_CURRENCY_DKK</option>
+						<option value="EUR">PLG_CMDONATION_PAYPAL_CURRENCY_EUR</option>
+						<option value="HKD">PLG_CMDONATION_PAYPAL_CURRENCY_HKD</option>
+						<option value="HUF">PLG_CMDONATION_PAYPAL_CURRENCY_HUF</option>
+						<option value="ILS">PLG_CMDONATION_PAYPAL_CURRENCY_ILS</option>
+						<option value="JPY">PLG_CMDONATION_PAYPAL_CURRENCY_JPY</option>
+						<option value="MXN">PLG_CMDONATION_PAYPAL_CURRENCY_MXN</option>
+						<option value="NOK">PLG_CMDONATION_PAYPAL_CURRENCY_NOK</option>
+						<option value="NZD">PLG_CMDONATION_PAYPAL_CURRENCY_NZD</option>
+						<option value="PHP">PLG_CMDONATION_PAYPAL_CURRENCY_PHP</option>
+						<option value="PLN">PLG_CMDONATION_PAYPAL_CURRENCY_PLN</option>
+						<option value="GBP">PLG_CMDONATION_PAYPAL_CURRENCY_GBP</option>
+						<option value="SGD">PLG_CMDONATION_PAYPAL_CURRENCY_SGD</option>
+						<option value="SEK">PLG_CMDONATION_PAYPAL_CURRENCY_SEK</option>
+						<option value="CHF">PLG_CMDONATION_PAYPAL_CURRENCY_CHF</option>
+						<option value="TWD">PLG_CMDONATION_PAYPAL_CURRENCY_TWD</option>
+						<option value="THB">PLG_CMDONATION_PAYPAL_CURRENCY_THB</option>
+						<option value="TRY">PLG_CMDONATION_PAYPAL_CURRENCY_TRY</option>
+						<option value="USD">PLG_CMDONATION_PAYPAL_CURRENCY_USD</option>
+				</field>
+
+				<field name="locale" type="list" default="GB"
+					label="PLG_CMDONATION_PAYPAL_LOCALE_LABEL"
+					description="PLG_CMDONATION_PAYPAL_LOCALE_DESC">
+						<option value="JOOMLA">PLG_CMDONATION_PAYPAL_LOCALE_JOOMLA</option>
+						<option value="AU">PLG_CMDONATION_PAYPAL_LOCALE_AU</option>
+						<option value="AT">PLG_CMDONATION_PAYPAL_LOCALE_AT</option>
+						<option value="BE">PLG_CMDONATION_PAYPAL_LOCALE_BE</option>
+						<option value="BR">PLG_CMDONATION_PAYPAL_LOCALE_BR</option>
+						<option value="CA">PLG_CMDONATION_PAYPAL_LOCALE_CA</option>
+						<option value="CH">PLG_CMDONATION_PAYPAL_LOCALE_CH</option>
+						<option value="CN">PLG_CMDONATION_PAYPAL_LOCALE_CN</option>
+						<option value="DE">PLG_CMDONATION_PAYPAL_LOCALE_DE</option>
+						<option value="ES">PLG_CMDONATION_PAYPAL_LOCALE_ES</option>
+						<option value="GB">PLG_CMDONATION_PAYPAL_LOCALE_GB</option>
+						<option value="FR">PLG_CMDONATION_PAYPAL_LOCALE_FR</option>
+						<option value="IT">PLG_CMDONATION_PAYPAL_LOCALE_IT</option>
+						<option value="NL">PLG_CMDONATION_PAYPAL_LOCALE_NL</option>
+						<option value="PL">PLG_CMDONATION_PAYPAL_LOCALE_PL</option>
+						<option value="PT">PLG_CMDONATION_PAYPAL_LOCALE_PT</option>
+						<option value="RU">PLG_CMDONATION_PAYPAL_LOCALE_RU</option>
+						<option value="US">PLG_CMDONATION_PAYPAL_LOCALE_US</option>
+						<option value="da_DK">PLG_CMDONATION_PAYPAL_LOCALE_DA_DK</option>
+						<option value="he_IL">PLG_CMDONATION_PAYPAL_LOCALE_HE_IL</option>
+						<option value="id_ID">PLG_CMDONATION_PAYPAL_LOCALE_ID_ID</option>
+						<option value="jp_JP">PLG_CMDONATION_PAYPAL_LOCALE_JP_JP</option>
+						<option value="no_NO">PLG_CMDONATION_PAYPAL_LOCALE_NO_NO</option>
+						<option value="pt_BR">PLG_CMDONATION_PAYPAL_LOCALE_PT_BR</option>
+						<option value="ru_RU">PLG_CMDONATION_PAYPAL_LOCALE_RU_RU</option>
+						<option value="sv_SE">PLG_CMDONATION_PAYPAL_LOCALE_SV_SE</option>
+						<option value="th_TH">PLG_CMDONATION_PAYPAL_LOCALE_TH_TH</option>
+						<option value="tr_TR">PLG_CMDONATION_PAYPAL_LOCALE_TR_TR</option>
+						<option value="zh_CN">PLG_CMDONATION_PAYPAL_LOCALE_ZH_CN</option>
+						<option value="zh_HK">PLG_CMDONATION_PAYPAL_LOCALE_ZH_HK</option>
+						<option value="zh_TW">PLG_CMDONATION_PAYPAL_LOCALE_ZH_TW</option>
+				</field>
+
+				<field name="seconds_to_wait" type="text" default="5"
+					label="PLG_CMDONATION_PAYPAL_SECONDS_TO_WAIT_LABEL"
+					description="PLG_CMDONATION_PAYPAL_SECONDS_TO_WAIT_DESC" />
+
+				<field name="cbt" type="text"
+					label="PLG_CMDONATION_PAYPAL_CBT_LABEL"
+					description="PLG_CMDONATION_PAYPAL_CBT_DESC" />
+
+				<field type="spacer" label="PLG_CMDONATION_PAYPAL_SPACER_SANBOX_LABEL"/>
+
+				<field name="sandbox_email" type="text"
+					label="PLG_CMDONATION_PAYPAL_SANDBOX_EMAIL_LABEL"
+					description="PLG_CMDONATION_PAYPAL_SANDBOX_EMAIL_DESC" />
+
+				<field name="sandbox" type="radio" default="0"
+					label="PLG_CMDONATION_PAYPAL_SANDBOX_LABEL"
+					description="PLG_CMDONATION_PAYPAL_SANDBOX_DESC">
+						<option value="1">JYes</option>
+						<option value="0">JNo</option>
+				</field>
+
+				<field type="spacer" label="PLG_CMDONATION_PAYPAL_SPACER_PAGE_STYLE_LABEL"/>
+
+				<field name="page_style" type="radio" default="paypal"
+					label="PLG_CMDONATION_PAYPAL_PAGE_STYLE_LABEL"
+					description="PLG_CMDONATION_PAYPAL_PAGE_STYLE_DESC">
+						<option value="paypal">PLG_CMDONATION_PAYPAL_PAGE_STYLE_PAYPAL</option>
+						<option value="primary">PLG_CMDONATION_PAYPAL_PAGE_STYLE_PRIMARY</option>
+						<option value="custom">PLG_CMDONATION_PAYPAL_PAGE_STYLE_CUSTOM</option>
+				</field>
+
+				<field name="custom_page_style" type="text" default=""
+					label="PLG_CMDONATION_PAYPAL_CUSTOM_PAGE_STYLE_LABEL"
+					description="PLG_CMDONATION_PAYPAL_CUSTOM_PAGE_STYLE_DESC" />
+
+				<field type="spacer" label="PLG_CMDONATION_PAYPAL_SPACER_LOGO_LABEL"/>
+
+				<field name="logo" type="radio" default=""
+					label="PLG_CMDONATION_PAYPAL_LOGO_LABEL"
+					description="PLG_CMDONATION_PAYPAL_LOGO_DESC">
+						<option value="">PLG_CMDONATION_PAYPAL_LOGO_NOT_USE</option>
+						<option value="internal">PLG_CMDONATION_PAYPAL_LOGO_INTERNAL</option>
+						<option value="external">PLG_CMDONATION_PAYPAL_LOGO_EXTERNAL</option>
+				</field>
+
+				<field name="logo_internal" type="media"
+					label="PLG_CMDONATION_PAYPAL_LOGO_INTERNAL_LABEL"
+					description="PLG_CMDONATION_PAYPAL_LOGO_INTERNAL_DESC" />
+
+				<field name="logo_external" type="text" default=""
+					label="PLG_CMDONATION_PAYPAL_LOGO_EXTERNAL_LABEL"
+					description="PLG_CMDONATION_PAYPAL_LOGO_EXTERNAL_DESC" />
+
+				<field type="spacer" label="PLG_CMDONATION_PAYPAL_SPACER_HEADER_LABEL"/>
+
+				<field name="header" type="radio" default=""
+					label="PLG_CMDONATION_PAYPAL_HEADER_LABEL"
+					description="PLG_CMDONATION_PAYPAL_HEADER_DESC">
+						<option value="">PLG_CMDONATION_PAYPAL_HEADER_NOT_USE</option>
+						<option value="internal">PLG_CMDONATION_PAYPAL_HEADER_INTERNAL</option>
+						<option value="external">PLG_CMDONATION_PAYPAL_HEADER_EXTERNAL</option>
+				</field>
+
+				<field name="header_internal" type="media"
+					label="PLG_CMDONATION_PAYPAL_HEADER_INTERNAL_LABEL"
+					description="PLG_CMDONATION_PAYPAL_HEADER_INTERNAL_DESC" />
+
+				<field name="header_external" type="text" default=""
+					label="PLG_CMDONATION_PAYPAL_HEADER_EXTERNAL_LABEL"
+					description="PLG_CMDONATION_PAYPAL_HEADER_EXTERNAL_DESC" />
+
+				<field type="spacer" label="PLG_CMDONATION_PAYPAL_SPACER_COLORS_LABEL"/>
+
+				<field name="headerback_color" type="color" default=""
+					label="PLG_CMDONATION_PAYPAL_HEADERBACK_COLOR_LABEL"
+					description="PLG_CMDONATION_PAYPAL_HEADERBACK_COLOR_DESC" />
+
+				<field name="headerborder_color" type="color" default=""
+					label="PLG_CMDONATION_PAYPAL_HEADERBORDER_COLOR_LABEL"
+					description="PLG_CMDONATION_PAYPAL_HEADERBORDER_COLOR_DESC" />
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

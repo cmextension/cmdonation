@@ -1,11 +1,13 @@
 <?php
 /**
  * @package    PlgCMDonationPaypalProExpress
- * @copyright  Copyright (C) 2012-2014 CMExtension Team http://www.cmext.vn/
+ * @copyright  Copyright (C) 2014-2015 CMExtension Team http://www.cmext.vn/
  * @license    GNU General Public License version 2 or later
  */
 
 defined('_JEXEC') or die();
+
+use Joomla\Filter\InputFilter;
 
 $include = include_once JPATH_ADMINISTRATOR . '/components/com_cmdonation/helpers/cmpayment.php';
 
@@ -152,7 +154,7 @@ class PlgCMDonationPaypalProExpress extends PlgCMPaymentAbstract
 		$paymentMethodName = JText::_($this->key);
 
 		@ob_start();
-		include dirname(__FILE__) . '/paypalproexpress/form.php';
+		include dirname(__FILE__) . '/form.php';
 		$html = @ob_get_clean();
 
 		return $html;
@@ -301,7 +303,7 @@ class PlgCMDonationPaypalProExpress extends PlgCMPaymentAbstract
 				$responseData['cmdonation_failure_reason'] = "PayPal error code: " . $responseData['PAYMENTINFO_0_ERRORCODE'];
 			}
 
-			$supportedPeriods = array('D', 'W', 'M', 'S', 'Y');
+			$supportedPeriods = array('D', 'W', 'M', 'Y');
 
 			if ($donation->recurring && in_array($donation->recurring_cycle, $supportedPeriods))
 			{
@@ -575,10 +577,19 @@ class PlgCMDonationPaypalProExpress extends PlgCMPaymentAbstract
 
 		$data = $_POST;
 
-		// Log the IPN data.
-		$this->logIPN($data, false);
+		if (empty($data))
+		{
+			$app->close();
+		}
 
 		$isValid = $this->isValidIPN($data);
+
+		$filter = new InputFilter;
+
+		foreach ($data as $k => $v)
+		{
+			$data[$k] = $filter->clean($v);
+		}
 
 		if (!$isValid)
 		{
@@ -587,7 +598,7 @@ class PlgCMDonationPaypalProExpress extends PlgCMPaymentAbstract
 
 		if ($isValid)
 		{
-			$validTypes = array('web_accept', 'recurring_payment', 'express_checkout');
+			$validTypes = array('express_checkout', 'recurring_payment', 'recurring_payment_profile_created');
 			$isValid = in_array($data['txn_type'], $validTypes);
 
 			if (!$isValid)
@@ -691,7 +702,7 @@ class PlgCMDonationPaypalProExpress extends PlgCMPaymentAbstract
 		if ($recurring)
 		{
 			// Save new donation.
-			$data = array(
+			$donationData = array(
 				'campaign_id'			=> $donation->campaign_id,
 				'first_name'			=> $donation->first_name,
 				'last_name'				=> $donation->last_name,
@@ -712,10 +723,10 @@ class PlgCMDonationPaypalProExpress extends PlgCMPaymentAbstract
 
 			if ($status == 'COMPLETED')
 			{
-				$data['completed'] = $now->toSql();
+				$donationData['completed'] = $now->toSql();
 			}
 
-			$db->insertObject('#__cmdonation_donations', $data, 'id');
+			$db->insertObject('#__cmdonation_donations', $donationData, 'id');
 		}
 		else
 		{
@@ -1050,10 +1061,6 @@ class PlgCMDonationPaypalProExpress extends PlgCMPaymentAbstract
 
 			case 'M':
 				$period = 'Month';
-				break;
-
-			case 'S':
-				$period = 'Semimonth';
 				break;
 
 			case 'Y':
