@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    PlgCMDonationPaypalProExpress
- * @copyright  Copyright (C) 2014-2015 CMExtension Team http://www.cmext.vn/
+ * @copyright  Copyright (C) 2014-2016 CMExtension Team http://www.cmext.vn/
  * @license    GNU General Public License version 2 or later
  */
 
@@ -18,6 +18,8 @@ $clickHere = '<a href="' . $transactionUrl . '">' . JText::_('COM_CMDONATION_CLI
 <script type="text/javascript">
 	function submitForm() {
 		document.paymentForm.submit();
+
+		return false;
 	}
 
 	setTimeout('submitForm()', <?php echo $seconds * 1000; ?>);

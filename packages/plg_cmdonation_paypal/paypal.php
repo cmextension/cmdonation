@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    PlgCMDonationPaypal
- * @copyright  Copyright (C) 2014-2015 CMExtension Team http://www.cmext.vn/
+ * @copyright  Copyright (C) 2014-2016 CMExtension Team http://www.cmext.vn/
  * @license    GNU General Public License version 2 or later
  */
 
@@ -93,7 +93,7 @@ class PlgCMDonationPaypal extends PlgCMPaymentAbstract
 			'cmd'						=> '_donations',
 			'item_name'					=> $itemName,
 			'business'					=> $business,
-			'currency'					=> $currency,
+			'currency_code'				=> $currency,
 			'lc'						=> $lc,
 			'item_number'				=> $data->donation_id,
 			'amount'					=> $data->amount,
@@ -126,7 +126,7 @@ class PlgCMDonationPaypal extends PlgCMPaymentAbstract
 
 		$secondsToWait		= $this->params->get('seconds_to_wait', '5');
 		$secondsToWait		= (int) $secondsToWait;
-		$redirectMessage	= '<a href="#" onClick="submitForm()">';
+		$redirectMessage	= '<a href="#" onClick="return submitForm()">';
 		$redirectMessage	.= JText::_('PLG_CMDONATION_PAYPAL_CLICK_HERE');
 		$redirectMessage	.= '</a>';
 		$redirectMessage	= JText::sprintf('PLG_CMDONATION_PAYPAL_REDIRECT_MESSAGE', $secondsToWait, $redirectMessage);

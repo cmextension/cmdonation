@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    CMDonation
- * @copyright  Copyright (C) 2014-2015 CMExtension Team http://www.cmext.vn/
+ * @copyright  Copyright (C) 2014-2016 CMExtension Team http://www.cmext.vn/
  * @license    GNU General Public License version 2 or later
  */
 
@@ -96,8 +96,8 @@ $dateFormat				= $params->get('date_format');
 					<h4>Extension information</h4>
 					<ul>
 						<li>Extension: CM Donation</li>
-						<li>Version: 1.1.0</li>
-						<li>Released date: November 3, 2015</li>
+						<li>Version: 1.1.1</li>
+						<li>Released date: January 12, 2016</li>
 						<li>License: <a href="http://www.gnu.org/licenses/gpl-2.0.html" target="_blank">GNU General Public License version 2 or later</a></li>
 						<li>Author: <a href="http://www.cmext.vn/" target="_blank">CMExtension team</a></li>
 					</ul>

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    CMDonationPaypal
- * @copyright  Copyright (C) 2014-2015 CMExtension Team http://www.cmext.vn/
+ * @copyright  Copyright (C) 2014-2016 CMExtension Team http://www.cmext.vn/
  * @license    GNU General Public License version 2 or later
  */
 
@@ -17,6 +17,8 @@ defined('_JEXEC') or die();
 	function submitForm()
 	{
 		document.donationForm.submit();
+
+		return false;
 	}
 	setTimeout("submitForm()", <?php echo ($secondsToWait * 1000); ?>);
 </script>

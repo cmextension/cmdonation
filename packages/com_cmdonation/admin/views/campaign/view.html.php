@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    CMDonation
- * @copyright  Copyright (C) 2014-2015 CMExtension Team http://www.cmext.vn/
+ * @copyright  Copyright (C) 2014-2016 CMExtension Team http://www.cmext.vn/
  * @license    GNU General Public License version 2 or later
  */
 
