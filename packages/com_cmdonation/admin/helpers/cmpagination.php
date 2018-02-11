@@ -7,13 +7,17 @@
 
 defined('_JEXEC') or die;
 
-if (version_compare(JVERSION, '3.0.0', 'lt'))
+if (version_compare(JVERSION, '3.8.0', 'ge'))
 {
-	require_once JPATH_LIBRARIES . '/joomla/html/pagination.php';
+	require_once JPATH_LIBRARIES . '/src/Pagination/Pagination.php';
+}
+elseif (version_compare(JVERSION, '3.8.0', 'lt') && version_compare(JVERSION, '3.0.0', 'ge'))
+{
+	require_once JPATH_LIBRARIES . '/cms/pagination/pagination.php';
 }
 else
 {
-	require_once JPATH_LIBRARIES . '/cms/pagination/pagination.php';
+	require_once JPATH_LIBRARIES . '/joomla/html/pagination.php';
 }
 
 /**
